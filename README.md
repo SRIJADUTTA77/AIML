@@ -1,98 +1,117 @@
-Great! Here's a ready-to-use **README.md** content tailored for your GitHub repository and Google Colab project. It documents all the steps covered in your Titanic dataset analysis, from data wrangling to modeling:
+# 🚀 Titanic Dataset – AIML Internship Assignment
+
+This repository contains two core tasks completed as part of the AIML internship, using Python and Google Colab for data analysis and modeling on the Titanic dataset.
 
 ---
 
-## 🚢 Titanic Dataset - Data Wrangling & Machine Learning
-
-This project walks through a complete data analysis and modeling pipeline using the **Titanic dataset**, implemented in **Google Colab**. It demonstrates best practices in data cleaning, preprocessing, feature selection, and classification modeling.
-
-### 📁 Dataset
-
-The dataset used is `Titanic-Dataset.csv` (based on the Titanic survival prediction dataset).
-
----
+## 📘 Task 1: Data Wrangling, Preprocessing, and Modeling
 
 ### 🔍 Step-by-Step Process
 
-#### 1. **Data Exploration**
+1. **Data Exploration**
+   - Loaded the dataset using `pandas`
+   - Viewed structure, data types, and missing values
+   - Used `.info()` and `.describe()` for basic profiling
 
-* Load the dataset using `pandas`
-* View the structure, data types, and missing values
-* Understand basic statistics with `.info()` and `.describe()`
+2. **Handling Missing Values**
+   - Imputed missing `Age` with **median**
+   - Filled `Embarked` using **mode**
+   - Dropped `Cabin` column (too many nulls)
+   - Dropped rows missing `Survived`
 
-#### 2. **Handling Missing Values**
+3. **Categorical Encoding**
+   - Converted `Sex` using label encoding (male → 0, female → 1)
+   - Applied one-hot encoding to `Embarked`
 
-* Impute missing `Age` values using **median**
-* Fill `Embarked` using **mode**
-* Drop the `Cabin` column (too many missing values)
-* Remove any rows with missing target (`Survived`) values
+4. **Feature Scaling**
+   - Scaled `Age` and `Fare` using `StandardScaler`
 
-#### 3. **Categorical Encoding**
+5. **Outlier Detection and Removal**
+   - Used boxplots to identify outliers
+   - Removed outliers using IQR method
 
-* Convert `Sex` to numeric using label encoding (male → 0, female → 1)
-* Use one-hot encoding for `Embarked`
+6. **Correlation Analysis**
+   - Heatmap of feature correlations
 
-#### 4. **Feature Scaling**
+7. **Train/Test Split**
+   - Removed unneeded columns: `Name`, `Ticket`, `PassengerId`
+   - Split into training and testing sets
 
-* Standardize `Age` and `Fare` using `StandardScaler` from `sklearn`
+8. **Modeling**
+   - Trained a Logistic Regression model
+   - Evaluated with:
+     - Accuracy
+     - Confusion Matrix
+     - Classification Report
 
-#### 5. **Outlier Detection and Removal**
-
-* Visualize outliers with `seaborn` boxplots
-* Remove extreme values using IQR method
-
-#### 6. **Correlation Analysis**
-
-* Generate a heatmap of feature correlations
-* Optional: drop weakly correlated features
-
-#### 7. **Train/Test Split**
-
-* Remove irrelevant columns like `PassengerId`, `Name`, `Ticket`
-* Split data into training and testing sets (80/20)
-
-#### 8. **Modeling**
-
-* Train a **Logistic Regression** model
-* Evaluate performance using:
-
-  * Accuracy
-  * Confusion Matrix
-  * Classification Report
-
-#### 9. **Model Comparison (Optional)**
-
-* Try alternative models:
-
-  * `RandomForestClassifier`
-  * `SVC` (Support Vector Classifier)
-  * `XGBClassifier` (if using XGBoost)
+9. **Model Comparison (Optional)**
+   - Tried additional models:
+     - `RandomForestClassifier`
+     - `SVC`
+     - `XGBClassifier`
 
 ---
 
 ### 📊 Technologies Used
 
-* Python 3.x
-* Pandas, NumPy
-* Scikit-learn
-* Matplotlib, Seaborn
-* Google Colab
+- Python 3.x
+- Pandas, NumPy
+- Scikit-learn
+- Seaborn, Matplotlib
+- Google Colab
 
 ---
 
-### 📈 Output
+## 📘 Task 2: Exploratory Data Analysis (EDA) and Visualization
 
-The final section prints the performance of your classification model, helping you assess survival prediction accuracy.
+🔗 **Notebook File:** [Task-2-AIML.ipynb](Task_2_AIML.ipynb)
+
+This notebook focuses on **feature-level analysis, patterns, and trends** using visualization.
+
+### ✅ Task Objectives
+
+1. **Generate Summary Statistics**
+   - Calculated mean, median, standard deviation, and quartiles
+
+2. **Create Histograms & Boxplots**
+   - Used histograms for distribution shapes
+   - Used boxplots to detect outliers
+
+3. **Explore Feature Relationships**
+   - Visualized correlation matrix
+   - Created pairplots with `hue="Survived"` to observe relationships
+
+4. **Identify Patterns, Trends, Anomalies**
+   - Found survival trends based on:
+     - Gender (female > male)
+     - Class (1st > 3rd)
+     - Fare and age (younger/high-fare had better survival)
+
+5. **Feature-Level Inferences**
+   - Gender, Pclass, and Fare are strong predictors
+   - Traveling alone or in small families affected outcomes
 
 ---
 
-### ✅ How to Run
+### 📈 How to Run
 
-1. Upload the dataset (`Titanic-Dataset.csv`) to Colab or your repo.
-2. Run each step in order to preprocess the data.
-3. Train your model and evaluate performance.
-4. Optionally, tune hyperparameters or test more classifiers.
+1. Open `Task-2-AIML.ipynb` in Google Colab
+2. Upload the dataset: `Titanic-Dataset.csv`
+3. Run all cells from top to bottom
+4. View visualizations and inferences
 
 ---
 
-Let me know if you'd like this converted into a downloadable `.md` file or if you want a Jupyter/Colab `.ipynb` notebook with all code and explanations combined.
+## 📂 Files in This Repository
+
+| File | Description |
+|------|-------------|
+| `Task_1_AIML.ipynb` | Titanic data wrangling, modeling, classification |
+| `Task-2-AIML.ipynb` | Titanic data EDA, visualization, and feature insights |
+| `Titanic-Dataset.csv` | CSV dataset (if included) |
+| `README.md` | Documentation for internship tasks |
+
+---
+
+## 👨‍💻 Author
+This repository was created as part of an **AI/ML Internship Assignment**, focused on hands-on application of data preprocessing, visualization, and machine learning.
