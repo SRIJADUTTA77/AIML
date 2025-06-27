@@ -112,6 +112,14 @@ This notebook focuses on **feature-level analysis, patterns, and trends** using 
 | `README.md` | Documentation for internship tasks |
 
 ---
+## 🏠 Housing Regression Notebook  
+**File**: `Task3_new_AIML.ipynb`  
+**Contents**:  
+- Data loading & preprocessing  
+- Simple & multiple linear regression  
+- Model evaluation (MAE, MSE, R²)  
+- Visualizations (coefficients, actual vs predicted)  
+- Bonus: Regularization and feature selection
 
 ## 👨‍💻 Author
 This repository was created as part of an **AI/ML Internship Assignment**, focused on hands-on application of data preprocessing, visualization, and machine learning.
